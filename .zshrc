@@ -21,6 +21,8 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Customize to your needs...
-source ~/.zsh-custom/env.sh
+# Customize my zsh 
+source ~/.config/zsh/env.sh
+
+# Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
