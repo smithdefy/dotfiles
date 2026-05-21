@@ -38,9 +38,9 @@ declare -a DOTFILES=(
     ".config/lazygit"
 
     # Add your own here...
-    ".config/nvim-from-scratch"
-    ".config/nvim-kickstart"
     ".config/zsh"
+    ".config/zsh-abbr"
+    
 )
 
 # ----------------------------------------------------------------------------
