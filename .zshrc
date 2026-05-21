@@ -24,5 +24,8 @@ fi
 # Customize my zsh 
 source ~/.config/zsh/env.sh
 
+# Node version manager
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 # Fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

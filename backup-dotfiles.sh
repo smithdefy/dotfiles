@@ -18,10 +18,16 @@ declare -a DOTFILES=(
     ".profile"
     ".bash_profile"
     ".inputrc"
+    ".p10k.zsh"
+
+    # Zsh customization
+    ".zlogin"
+    ".zlogout"
+    ".zpreztorc"
+    ".zprofile"
 
     # Editors
     ".vimrc"
-    ".config/nvim"
     ".config/helix"
 
     # Terminal
@@ -38,9 +44,8 @@ declare -a DOTFILES=(
     ".config/lazygit"
 
     # Add your own here...
-    ".config/nvim-from-scratch"
-    ".config/nvim-kickstart"
     ".config/zsh"
+    ".aerospace.toml"
 )
 
 # ----------------------------------------------------------------------------
