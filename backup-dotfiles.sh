@@ -21,10 +21,12 @@ declare -a DOTFILES=(
     ".p10k.zsh"
 
     # Zsh customization
-    ".zlogin"
-    ".zlogout"
-    ".zpreztorc"
-    ".zprofile"
+    ".zprezto/runcoms/zlogin"
+    ".zprezto/runcoms/zlogout"
+    ".zprezto/runcoms/zpreztorc"
+    ".zprezto/runcoms/zprofile"
+    ".zprezto/runcoms/zshenv"
+    ".zprezto/runcoms/zshrc"
 
     # Editors
     ".vimrc"
