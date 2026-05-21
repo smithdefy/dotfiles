@@ -1,28 +1,46 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Created by newuser for 5.9
+DISABLE_MAGIC_FUNCTIONS=true
+ABBR_SET_EXPANSION_CURSOR=1
 
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+# Addtions to PATH
+export PATH="$HOME/.atuin/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/kitty.app/bin:$PATH"
+export PATH="$HOME/Development/scripts:$PATH"
+export PATH="/opt/python3.12/lib/python3.12/site-packages:$PATH"
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# Environment Variables
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
+# Core options for speed & usability
+setopt autocd extendedglob nomatch notify
+setopt histignorealldups histignorespace incappendhistory sharehistory
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Completions
+autoload -Uz compinit && compinit
 
-# Customize my zsh 
-source ~/.config/zsh/env.sh
+# Plugins (clone or use manager)
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/.zsh/zsh-abbr/zsh-abbr.zsh
+# or zsh-autocomplete, zsh-abbr, etc.
 
-# Fuzzy finder
+# Modern tools
+eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
+
+# Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# fnm
+FNM_PATH="/home/nsmith/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
+fi
+
+# Use Fast Node Manager to install NodeJS on directory change
+eval "$(fnm env --use-on-cd)"
+
+# Starship at the very end
+eval "$(starship init zsh)"
