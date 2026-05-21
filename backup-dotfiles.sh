@@ -48,6 +48,7 @@ declare -a DOTFILES=(
     # Add your own here...
     ".config/zsh"
     ".aerospace.toml"
+    ".config/neofetch"
 )
 
 # ----------------------------------------------------------------------------
