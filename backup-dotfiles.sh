@@ -31,6 +31,7 @@ declare -a DOTFILES=(
     # Editors
     ".vimrc"
     ".config/helix"
+    ".config/zed"
 
     # Terminal
     ".config/kitty"

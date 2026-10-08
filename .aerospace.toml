@@ -236,11 +236,10 @@ on-mode-changed = []
     1 = 'main'
     B = 'main'
     C = 'secondary'
-    I = 'main'
-    K = 'main'
-    N = 'main'
+    S = 'main'
     P = 'main'
     T = 'secondary'
+    W = 'secondary'
     Y = 'secondary'  
 
 [[on-window-detected]]
@@ -252,7 +251,15 @@ on-mode-changed = []
    run = ['move-node-to-workspace C']
 
 [[on-window-detected]]
+   if.app-id = 'com.anysphere.sand'
+   run = ['move-node-to-workspace G']
+
+[[on-window-detected]]
    if.app-id = 'com.jetbrains.intellij'
+   run = ['move-node-to-workspace I']
+
+[[on-window-detected]]
+   if.app-id = 'dev.zed.Zed'
    run = ['move-node-to-workspace I']
 
 [[on-window-detected]]
@@ -270,6 +277,10 @@ on-mode-changed = []
 [[on-window-detected]]
    if.app-id = 'com.microsoft.teams2'
    run = ['move-node-to-workspace T']
+
+[[on-window-detected]]
+   if.app-id = 'com.microsoft.rdc.macos'
+   run = ['move-node-to-workspace W']
 
 [[on-window-detected]]
    if.app-name-regex-substring = '.*youtube.*'

@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Company Jira API Token
+export JIRA_API_TOKEN="ATATT3xFfGF0vAn7N8B-l5mVcB5va5iUWnoJzmQ6JDONIFMkVmRRLC3fP5XXTkxJ6h7BjbT3H_hS5xhCcH1b4RfyWBWWMgdaF7t4l2Aq2vFGKyBApUIQ6IdGNyN85J5wgTf0HRftj0xiiCa3Fc4Mu0S4paMz9xDpN39eAop9rAvR3GR8XymrTPs=C7389ACB"
+
 # System Paths 
 sys_paths=("/opt/homebrew/opt/python@3.11/libexec/bin")
 
@@ -62,49 +65,64 @@ function goToData() {
     cd /data
 }
 
+# 
 # Aliases
+#
+
+#General
 alias l='ls -1A'
 alias ll='ls -lh'
 alias lt='ll -tr'
 alias lz='lt -A'
-alias nvim-update='nvim --headless "+Lazy! sync" +qa'
-alias nvimks='NVIM_APPNAME="nvim-kickstart" nvim'
-alias nvimks-update='nvimks --headless "+Lazy! sync" +qa'
-alias nvimfs='NVIM_APPNAME="nvim-from-scratch" nvim'
-alias nvimfs-update='nvimfs --headless "+Lazy! sync" +qa'
 alias oldbrew=/usr/local/bin/brew
 alias rmd=removeDir
 alias size=sizeAndSort
 
 # PV+ dev commands
 alias nr='npm run' 
+alias nrin='npm --prefix ~/Development/projects/provision-plus-master run install'
+alias nrbl='npm --prefix ~/Development/projects/provision-plus-master run build.lib'
 alias nrsr='npm --prefix ~/Development/projects/provision-plus-master/client-v2 run serve'
 alias nrst='npm --prefix ~/Development/projects/provision-plus-master/server run start'
-alias nrin='npm --prefix ~/Development/projects/provision-plus-master install'
-alias nrbl='npm --prefix ~/Development/projects/provision-plus-master run build.lib'
 alias nrtw='npm --prefix ~/Development/projects/provision-plus-master/server run tsc:watch'
 alias nrt1='npm --prefix ~/Development/projects/provision-plus-master/server run test:unit'
 alias nrt2='npm --prefix ~/Development/projects/provision-plus-master/server run v2:test'
-alias sc='npm --prefix ~/Development/projects/provision-plus-master run check' 
+alias pvst='cd ~/Development/projects/provision-plus-master/server && npx gulp nodemon'
+alias sc='check-all.sh' 
 
 # Git
 alias bU='git fetch origin --recurse-submodules=yes --progress --prune'
 alias mU='git fetch origin master:master --recurse-submodules=yes --progress --prune'
 alias mR='git rebase origin/master'
 
-# Use neovim for editing config files
-alias editaero"nvim ~/.aerospace.toml"
+# Config 
 alias editenv="nvim ~/.config/zsh/env.sh"
 alias editkitty="nvim ~/.config/kitty/kitty.conf"
+alias editwm="nvim ~/.aerospace.toml"
 alias editzsh="nvim ~/.zshrc"
+alias editnvimfs="nvim ~/.config/nvim-from-scratch/."
+alias editnvimks="nvim ~/.config/nvim-kickstart/."
 
-# Edit neovim config (new)
-alias editnvim="nvim ~/.config/nvim-from-scratch/."
+# Neovim
+alias nvim-update='nvim --headless "+Lazy! sync" +qa'
+alias nvimks='NVIM_APPNAME="nvim-kickstart" nvim'
+alias nvimks-update='nvimks --headless "+Lazy! sync" +qa'
+alias nvimfs='NVIM_APPNAME="nvim-from-scratch" nvim'
+alias nvimfs-update='nvimfs --headless "+Lazy! sync" +qa'
+
+# Services
+alias mongostart='launchctl start org.mongodb.mongod'
+alias mongostop='launchctl stop org.mongodb.mongod'
+alias redisstart='brew services start redis'
+alias redisstop='brew services stop redis'
+alias redisstatus='brew services list | grep redis'
 
 # Reload shell environment
 alias reloadsh="source ~/.zshrc"
 
-# Directory aliases ***********************************************************
+# 
+# Directory aliases 
+#
 alias config='cd ~/.config'
 alias scripts='cd ~/Development/scripts'
 alias dev=goToProject

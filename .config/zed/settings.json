@@ -1,0 +1,57 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "dock": "right",
+    "threads_sidebar": {
+      "position": "right"
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "lsp_highlight_debounce": 0,
+  "edit_predictions": {
+    "provider": "zed",
+  },
+  "cli_default_open_behavior": "existing_window",
+  "preferred_line_length": 80,
+  "soft_wrap": "editor_width",
+  "terminal": {
+    "dock": "right",
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Macchiato",
+    "dark": "Catppuccin Macchiato",
+  },
+  "agent_servers": {
+    "grok-build": {
+      "type": "custom",
+      "command": "/Users/newuser/.grok/bin/grok",
+      "args": ["agent","--always-approve", "stdio"]
+    },
+    "claude-acp": {
+      "default_config_options": {
+        "model": "default",
+        "effort": "default",
+        "mode": "plan",
+        "fast": false,
+      },
+      "type": "registry",
+    },
+  },
+  "base_keymap": "JetBrains",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Dark Soft",
+    "dark": "Catppuccin Macchiato",
+  },
+}
