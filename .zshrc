@@ -28,5 +28,5 @@ source ~/.config/zsh/env.sh
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Fuzzy finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+source /opt/local/share/fzf/shell/completion.zsh
+source /opt/local/share/fzf/shell/key-bindings.zsh

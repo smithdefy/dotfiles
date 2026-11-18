@@ -123,9 +123,9 @@ on-mode-changed = []
     alt-k = 'focus up'
     alt-l = 'focus right'
 
-    alt-shift-left = 'focus-monitor left'
+    #alt-shift-left = 'focus-monitor left'
     alt-shift-leftSquareBracket = 'focus-monitor left'
-    alt-shift-right = 'focus-monitor right'
+    #alt-shift-right = 'focus-monitor right'
     alt-shift-rightSquareBracket = 'focus-monitor right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
@@ -236,15 +236,16 @@ on-mode-changed = []
     1 = 'main'
     B = 'main'
     C = 'secondary'
+    G = 'secondary'
     S = 'main'
     P = 'main'
     T = 'secondary'
     W = 'secondary'
-    Y = 'secondary'  
+    Y = 'secondary'
 
 [[on-window-detected]]
     if.app-id = 'com.brave.Browser'
-    run = ['move-node-to-workspace B'] 
+    run = ['move-node-to-workspace B']
 
 [[on-window-detected]]
    if.app-id = 'com.google.Chrome'
@@ -285,4 +286,3 @@ on-mode-changed = []
 [[on-window-detected]]
    if.app-name-regex-substring = '.*youtube.*'
    run = ['move-node-to-workspace Y']
-

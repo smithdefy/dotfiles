@@ -7,6 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "debugger": {
+    "dock": "right"
+  },
+  "languages": {
+    "Markdown-Inline": {
+      "preferred_line_length": 80
+    }
+  },
+  "markdown_preview": {
+    "font_size": 15.0
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "agent_ui_font_size": 16.0,
+  "ui_font_weight": 400.0,
   "agent": {
     "dock": "right",
     "threads_sidebar": {
@@ -17,7 +35,10 @@
   },
   "lsp_highlight_debounce": 0,
   "edit_predictions": {
-    "provider": "zed",
+    "ollama": {
+      "api_url": "http://localhost:11434"
+    },
+    "provider": "ollama",
   },
   "cli_default_open_behavior": "existing_window",
   "preferred_line_length": 80,
@@ -38,6 +59,7 @@
     },
     "claude-acp": {
       "default_config_options": {
+        "ultracode": false,
         "model": "default",
         "effort": "default",
         "mode": "plan",
@@ -47,7 +69,7 @@
     },
   },
   "base_keymap": "JetBrains",
-  "ui_font_size": 16,
+  "ui_font_size": 17.0,
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
